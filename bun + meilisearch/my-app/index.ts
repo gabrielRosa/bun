@@ -20,7 +20,7 @@ Bun.serve({
         return Response.json({ message: 'Enqueued', task }, { status: 202 });
       }
     },
-    "/event/:id": {
+    "/events/:id": {
       async GET({ params }) {
         try {
           const doc = await eventIndex.getDocument(params.id);
